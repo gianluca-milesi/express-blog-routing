@@ -14,9 +14,9 @@ router.get("/", (req, res) => {
 
 //Show
 router.get("/:id", (req, res) => {
-    const id = req.params.id;
+    const id = parseInt(req.params.id);
     // res.send(`Ecco il post con id: ${id}`);
-    const post = posts.find((item) => item.id === id)
+    const post = posts.find((item) => item.id === id);
     res.json(post);
 });
 
